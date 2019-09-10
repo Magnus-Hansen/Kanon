@@ -1,21 +1,24 @@
-shoot play;
+bullet play;
 PVector location;
 PVector gravity;
 PVector velocity;
 
 void setup() {
-  size(800,800);
-  play = new shoot();
+  size(800, 800);
+  play = new bullet();
 }
 
-  void draw() {
-    pushMatrix();
-background(0,0,255);
-if (mousePressed == true) {
- play.bullet();
- 
-}
-  rect(100,650,100,100);
-    popMatrix();
+void draw() {
+  background(0, 0, 255);
+  pushMatrix();
+  // husk at lave rotate funktion 
+  popMatrix();
+  play.bounce();
+  rect(100, 650, 100, 100);
+}  
 
+void mouseClicked() {
+  for(int i = 1; i < 10; i++){
+  play.display();
   }
+}
