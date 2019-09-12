@@ -1,9 +1,12 @@
 class bullet {
+  PVector location;
+  PVector velocity;
+  PVector gravity;
 
   bullet() {
-    location = new PVector(150, 650);
-    velocity = new PVector(5, -5);
-    gravity = new PVector(0, 0.1);
+    location = new PVector(10000, 10000);
+    velocity = new PVector(0, 0);
+    gravity = new PVector(0, 0);
   }
 
   void bounce() {
@@ -19,7 +22,10 @@ class bullet {
 
   void display() {
     rect(location.x, location.y, 50, 50);
-    location.add(velocity);
+  }
+
+  void update() {
+    location.add(velocity); 
     velocity.add(gravity);
   }
 }
