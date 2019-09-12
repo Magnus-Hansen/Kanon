@@ -1,11 +1,6 @@
-PImage img;
 int total = 10;
 bullet [] barray = new bullet[total];
-PVector location;
-PVector gravity;
-PVector velocity;
 int c = 0;
-
 
 void setup() {
   for (int i = 0; i < barray.length; i++) {
@@ -17,16 +12,18 @@ void setup() {
 void draw() {
   background(0, 0, 255);
   for (int i = 0; i < barray.length; i++) {
-    barray[i].update();
     barray[i].display();
   }
-  
+  fill(0, 0, 0);
   rect(100, 650, 100, 100);
+  fill(#FF9F03);
+  ellipse(100, 750, 30, 30);
+  ellipse(130, 750, 30, 30);
 }  
 
 void mouseClicked() {
   barray[c].location = new PVector(150, 650);
-  barray[c].velocity = new PVector(5, -5);
+  barray[c].velocity = new PVector(7, -5);
   barray[c].gravity = new PVector(0, 0.1);
   c++;
 }
