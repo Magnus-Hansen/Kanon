@@ -17,8 +17,8 @@ void draw() {
   fill(0, 0, 0);
   rect(100, 650, 100, 100);
   fill(#FF9F03);
-  ellipse(100, 750, 30, 30);
-  ellipse(130, 750, 30, 30);
+  ellipse(70, 700, 30, 30);
+  ellipse(130, 700, 30, 30);
 }  
 
 void mouseClicked() {
