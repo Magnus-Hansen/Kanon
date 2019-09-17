@@ -1,4 +1,4 @@
-int total = 10;
+int total = 100;
 bullet [] barray = new bullet[total];
 int c = 0;
 
